@@ -5,7 +5,7 @@ const app = express();
 //use json to help access the body. this serves as a middlewear
 app.use(express.json());
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 //require the database
 let { listOfDestinations } = require("./database");
